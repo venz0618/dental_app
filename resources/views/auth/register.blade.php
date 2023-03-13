@@ -1,7 +1,7 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
+@extends('auth.components.login.index')
+@section('title','Registration')
+@section('login_content')
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -73,5 +73,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+ @include('auth.components.register.form')
+
 @endsection
