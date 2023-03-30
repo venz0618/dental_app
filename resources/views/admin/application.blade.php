@@ -1,8 +1,6 @@
 @extends('admin.layout.index')
-@section('title','Dashboard')
+@section('title', 'Appoinments')
 @section('admin_content')
-
-@include('admin.layout.page-content')
 
 <div class="container-fluid">
 
@@ -61,5 +59,6 @@
     </div>
 
 </div>
+
 
 @endsection

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>@yield('title')</title>
    
     <!-- Custom fonts for this template-->
     
@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template-->
     <link href="../sb/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
 </head>
 
@@ -37,6 +38,9 @@
     <div id="content">
         @include('admin.layout.topbar')
         {{-- @include('user.layout.page-content') --}}
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-4">
+            <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
+       </div>
         @yield('admin_content')
     </div>
          @include('admin.layout.footer')
@@ -97,6 +101,29 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+<script>
+    $(function () {
+        $("#appointment").DataTable({
+        "responsive": true, "lengthChange": true, "autoWidth": true,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+
+        $('#appointment').DataTable({
+            "paging": false,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": false,
+            "info": false,
+            "autoWidth": true,
+            "responsive": true,
+        })
+    });
+</script>
 
 </body>
 

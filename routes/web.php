@@ -27,5 +27,6 @@ Route::view('services','home.services');
 Route::view('admin/dashboard','admin.dashboard');
 Route::view('user/dashboard','user.dashboard');
 Route::view('dentist/dashboard','dentist.index');
+Route::view('admin/appointments','admin.application');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
