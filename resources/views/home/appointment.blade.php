@@ -49,7 +49,12 @@
                                 </div>
                             </div>
                             <div class="col-12">
+                                @guest
+                                <a class="btn btn-dark w-100 py-3" href="{{ route('login') }}" type="submit">Make Appointment</a>
+                                @endguest
+                                @auth
                                 <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
+                                @endauth
                             </div>
                         </div>
                     </form>

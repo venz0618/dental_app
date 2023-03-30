@@ -8,6 +8,9 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
+                            <a href="/" class="navbar-brand p-0">
+                                <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
+                            </a>
                             <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                         </div>
                         <form method="POST" action="{{ route('register') }}">

@@ -28,18 +28,18 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        @include('user.layout.sidebar')
+        @include('admin.layout.sidebar')
 
   <!-- Content Wrapper -->
   <div id="content-wrapper" class="d-flex flex-column">
 
     <!-- Main Content -->
     <div id="content">
-        @include('user.layout.topbar')
+        @include('admin.layout.topbar')
         {{-- @include('user.layout.page-content') --}}
-        @yield('user_content')
+        @yield('admin_content')
     </div>
-         @include('user.layout.footer')
+         @include('admin.layout.footer')
     <!-- End of Content Wrapper -->
 
 </div>

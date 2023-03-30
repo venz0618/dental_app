@@ -24,7 +24,7 @@ Route::view('/','home.homepage');
 Route::view('aboutUs','home.aboutUs');
 Route::view('appointment','home.appointment_app');
 Route::view('services','home.services');
-Route::view('admin/dashboard','admin.index');
+Route::view('admin/dashboard','admin.dashboard');
 Route::view('user/dashboard','user.dashboard');
 Route::view('dentist/dashboard','dentist.index');
 

@@ -1,7 +1,7 @@
 <div class="container-fluid banner mb-5">
     <div class="container">
         <div class="row gx-0">
-            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+            <div class="col-lg-5 wow zoomIn" data-wow-delay="0.1s">
                 <div class="bg-primary d-flex flex-column p-5" style="height: 300px;">
                     <h3 class="text-white mb-3">Opening Hours</h3>
                     <div class="d-flex justify-content-between text-white mb-3">
@@ -16,10 +16,10 @@
                         <h6 class="text-white mb-0">Sunday</h6>
                         <p class="mb-0"> 8:00am - 5:00pm</p>
                     </div>
-                    <a class="btn btn-light" href="">Appointment</a>
+                    {{-- <a class="btn btn-light" href="">Appointment</a> --}}
                 </div>
             </div>
-            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+            {{-- <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
                 <div class="bg-dark d-flex flex-column p-5" style="height: 300px;">
                     <h3 class="text-white mb-3">Search A Doctor</h3>
                     <div class="date mb-3" id="date" data-target-input="nearest">
@@ -34,8 +34,8 @@
                     </select>
                     <a class="btn btn-light" href="">Search Doctor</a>
                 </div>
-            </div>
-            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+            </div> --}}
+            <div class="col-lg-7 wow zoomIn" data-wow-delay="0.6s">
                 <div class="bg-secondary d-flex flex-column p-5" style="height: 300px;">
                     <h3 class="text-white mb-3">Make Appointment</h3>
                     <p class="text-white">Ipsum erat ipsum dolor clita rebum no rebum dolores labore, ipsum magna at eos et eos amet.</p>
