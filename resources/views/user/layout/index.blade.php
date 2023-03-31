@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>@yield('title')</title>
    
     <!-- Custom fonts for this template-->
     
@@ -37,6 +37,11 @@
     <div id="content">
         @include('user.layout.topbar')
         {{-- @include('user.layout.page-content') --}}
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-4">
+          
+            <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
+            
+       </div>
         @yield('user_content')
     </div>
          @include('user.layout.footer')
