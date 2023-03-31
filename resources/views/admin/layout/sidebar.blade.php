@@ -101,7 +101,7 @@
     <hr class="sidebar-divider">
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="services">
             <i class="fa fa-handshake"></i>
             <span>Services</span></a>
     </li>
@@ -109,7 +109,7 @@
     <hr class="sidebar-divider">
 
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="products">
             <i class="fa fa-shopping-bag"></i>
             <span>Products</span></a>
     </li>
@@ -117,7 +117,7 @@
     <hr class="sidebar-divider">
 
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="dentist">
             <i class="fa fa-user-md"> </i>
             <span>Dentist</span></a>
     </li>

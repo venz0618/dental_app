@@ -46,7 +46,7 @@
     @include('home.service') --}}
     @include('home.layout.footer')
  
-    
+    @include('sweetalert::alert')
     @include('home.scrips.jsLibraries')
     @include('home.scrips.jsTemplates')
  

@@ -39,11 +39,21 @@
         @include('admin.layout.topbar')
         {{-- @include('user.layout.page-content') --}}
         <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-4">
+            @if(Request()->is ('admin/dashboard') || Request()->is ('admin/appointments'))
             <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
+            @else
+            <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
+            
+            <button type="button" class="btn btn-primary mr-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                @yield('button_name')
+              </button>
+            @endif
        </div>
         @yield('admin_content')
     </div>
          @include('admin.layout.footer')
+         @include('sweetalert::alert')
+
     <!-- End of Content Wrapper -->
 
 </div>
@@ -110,7 +120,7 @@
         $("#appointment").DataTable({
         "responsive": true, "lengthChange": true, "autoWidth": true,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        }).buttons().container().appendTo('#appointment_wrapper .col-md-6:eq(0)');
 
 
         $('#appointment').DataTable({
