@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
            
         </div>
-        <div class="sidebar-brand-text mx-3">Admin</div>
+        <div class="sidebar-brand-text mx-3 mr-5"><i class="fa fa-tooth me-2"></i> Admin</div>
     </a>
 
     <!-- Divider -->

@@ -69,7 +69,7 @@
 
                         <div class="form-group">
 
-                            <input type="text" class="form-control form-control-user" name="service_name" placeholder="Type Of Services">
+                            <input required type="text" class="form-control form-control-user" name="service_name" placeholder="Type Of Services">
 
                         </div>
                         <div class="form-group">

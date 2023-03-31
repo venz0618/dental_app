@@ -71,7 +71,7 @@
 
                 <div class="form-group">
 
-                    <input type="text" class="form-control form-control-user" name="dentist_name" placeholder="Name">
+                    <input required type="text" class="form-control form-control-user" name="dentist_name" placeholder="Name">
 
                 </div>
                 <div class="form-group">

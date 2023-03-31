@@ -68,8 +68,8 @@
             </div>
         </div>
     </div>
-
 </div>
+  
 
 @foreach($app as $a)
 <!-- Modal -->
@@ -107,22 +107,18 @@
                       </select>
 
                 </div>
-                <div class="form-group">
-                   
-                </div>
-                
-            
+
+                          
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div>
-    </form>
+        </form>
         </div>
-        
+        </div>
       </div>
-    </div>
-  </div>
+   
 @endforeach
 
 @endsection
