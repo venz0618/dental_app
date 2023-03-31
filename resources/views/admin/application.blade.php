@@ -76,26 +76,36 @@
 <div class="modal fade" id="exampleModal{{$a->app_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header d-flex justify-content-center">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Update Status</h1>
         </div>
         <div class="modal-body">
-            <form method="POST" action="{{ url('/admin/dentist') }}">
+            <form method="POST" action="{{ route('appointments.update', $a->app_id) }}">
                 @csrf
-
+                @method('PUT')
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->firstname}} {{$a->lastname}}">
+                    <input disabled type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->firstname}} {{$a->lastname}}">
 
                 </div>
                 <div class="form-group">
                     <label for="services">Services</label>
-                    <input type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->service_name}}">
+                    <input disabled type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->service_name}}">
 
                 </div>
                 <div class="form-group">
                     <label for="dentist">Dentist</label>
-                    <input type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->dentist_name}}">
+                    <input disabled type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->dentist_name}}">
+
+                </div>
+                <div class="form-group">
+                    <label for="dentist">Appointment Date</label>
+                    <input disabled type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->date}}">
+
+                </div>
+                <div class="form-group">
+                    <label for="dentist">Appointment Time</label>
+                    <input disabled type="text" class="form-control form-control-user" name="dentist_name" placeholder="{{$a->time}}">
 
                 </div>
                 <div class="form-group">
@@ -112,7 +122,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
           </div>
         </form>
         </div>

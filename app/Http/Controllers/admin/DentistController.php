@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Dentist;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -48,10 +49,10 @@ class DentistController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Dentist  $dentist
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Dentist $dentist)
+    public function show($id)
     {
         //
     }
@@ -59,10 +60,10 @@ class DentistController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Dentist  $dentist
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dentist $dentist)
+    public function edit($id)
     {
         //
     }
@@ -71,10 +72,10 @@ class DentistController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Dentist  $dentist
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dentist $dentist)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -82,10 +83,10 @@ class DentistController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Dentist  $dentist
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dentist $dentist)
+    public function destroy($id)
     {
         //
     }

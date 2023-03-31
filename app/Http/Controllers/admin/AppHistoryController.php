@@ -5,8 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Appointment_app;
-use RealRashid\SweetAlert\Facades\Alert;
-class ApplicationController extends Controller
+class AppHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,9 +28,9 @@ class ApplicationController extends Controller
         
         
         )
-        ->where('app_status','=', 0)
+        ->where('app_status','!=', 0)
         ->get();
-        return view('admin.application', compact('app'));
+        return view('admin.app_history', compact('app'));
     }
 
     /**
@@ -86,12 +85,7 @@ class ApplicationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $app = Appointment_app::find($id);
-        $app->app_status = $request->app_status;
-        $app->save();
-
-        Alert::success('Updated', 'Appointment successfully updated!! ');
-        return redirect('admin/history');
+        //
     }
 
     /**

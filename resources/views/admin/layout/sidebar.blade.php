@@ -122,6 +122,13 @@
             <span>Dentist</span></a>
     </li>
 
+    <hr class="sidebar-divider">
+    <li class="nav-item">
+        <a class="nav-link" href="history">
+            <i class="fa fa-undo"> </i>
+            <span>Appoinments History</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\ServicesController;
-use App\Http\Controllers\DentistController;
+use App\Http\Controllers\admin\ServicesController;
+use App\Http\Controllers\admin\DentistController;
 use App\Http\Controllers\AppointmentAppController;
 use App\Http\Controllers\admin\ApplicationController;
+use App\Http\Controllers\admin\AppHistoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,5 +42,6 @@ Route::resource('admin/services', ServicesController::class);
 Route::resource('admin/dentist', DentistController::class);
 Route::resource('appointment', AppointmentAppController::class);
 Route::resource('admin/appointments', ApplicationController::class);
+Route::resource('admin/history', AppHistoryController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

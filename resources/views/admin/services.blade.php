@@ -43,7 +43,9 @@
                                 <span class="badge badge-success">Available</span>
                                 @endif
                             </td>
-                             <td><a class="btn btn-success "><i class="fa fa-eye"></i></a></td>
+                             <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal{{$s->id}}"><i class="fa fa-eye"></i></button>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -74,7 +76,7 @@
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="service_status" aria-label="Default select example">
-                                <option selected>Status</option>
+                                <option disabled selected>Status</option>
                                 <option value="0">Not Available</option>
                                 <option value="1">Available</option>
                                 
@@ -96,5 +98,46 @@
             </div>
         </div>
 
+
+        @foreach($services as $s)
+<!-- Modal -->
+<div class="modal fade" id="updateModal{{$s->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Update Status</h1>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="{{ route('services.update', $s->id) }}">
+                @csrf
+                @method('PUT')
+                <div class="form-group">
+                    <label for="name">Type of Services</label>
+                    <input type="text" class="form-control form-control-user" name="service_name" value="{{$s->service_name}}">
+
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select class="form-control" name="service_status" aria-label="Default select example">
+                        <option disabled selected>Status</option>
+                        <option value="0">Not Available</option>
+                        <option value="1">Available</option>
+                        
+                      </select>
+
+                </div>
+
+                          
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+        </div>
+        </div>
+      </div>
+   
+@endforeach
 
 @endsection

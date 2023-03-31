@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Services;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -39,27 +40,22 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-    //    $request->validate([
-    //     'name'      => 'require|string',
-    //     'status'    => 'require'
-    //    ]);
-
-       $services = new Services();
-       $services->service_name = $request->service_name;
-       $services->service_status = $request->service_status;
-       $services->save();
-       Alert::success('Success', 'Services successfully Added');
-
-       return redirect('/admin/services');
+        $services = new Services();
+        $services->service_name = $request->service_name;
+        $services->service_status = $request->service_status;
+        $services->save();
+        Alert::success('Success', 'Services successfully Added');
+ 
+        return redirect('/admin/services');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Services  $services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Services $services)
+    public function show($id)
     {
         //
     }
@@ -67,10 +63,10 @@ class ServicesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Services  $services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Services $services)
+    public function edit($id)
     {
         //
     }
@@ -79,21 +75,27 @@ class ServicesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Services  $services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Services $services)
+    public function update(Request $request, $id)
     {
-        //
+        $services = Services::find($id);
+        $services->service_name = $request->service_name;
+        $services->service_status = $request->service_status;
+        $services->save();
+        Alert::success('Updated', 'Services successfully updated!!');
+
+        return redirect('admin/services');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Services  $services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Services $services)
+    public function destroy($id)
     {
         //
     }
